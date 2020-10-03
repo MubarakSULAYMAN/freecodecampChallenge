@@ -6,50 +6,58 @@ body {
 
 a {
   text-decoration: none;
+  color: blue;
 }
 
 a:hover {
   color: white;
   padding: 5px 10px;
   border-radius: 20px;
-  /* opacity: 0.75; */
-  /* cursor: grab; */
   cursor: pointer;
   background-color: blue;
 }
 
-#navbar {
+header#navbar {
+  background-color: blue;
     font: bold 18px/21px Helvetica, Arial, sans-serif;
     position: -webkit-sticky;
     position: sticky;
     top: -1px;
     z-index: 5;
+    padding: 10px 20px;
     box-shadow: 1px 2px 3px 4px thistle;
 }
 
-nav {
-    background-color: blue;
-    color: white;
+/* .img-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  padding: 7.5px 20px;
+} */
+
+nav ul li a {
+    color: white !important;
     font-weight: bold;
-    padding: 10px 20px;
 }
 
 nav ul,
 .contacts ul {
     display: flex;
     list-style: none;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 section {
     padding: 0 20px;
+    z-index: 1;
 }
 
 #welcome-section {
-  position: relative;
-  top: 0;
+  position: sticky;
+  top: -20px;
   left: 0;
   height: 100vh;
+  z-index: -999;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -57,7 +65,6 @@ section {
   border-bottom: 2px dashed blue;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  /* background-color: antiquewhite; */
 }
 
 #welcome-section p {
@@ -133,22 +140,27 @@ section {
   left: 0;
   display: inline-block;
   width: calc(100% - var(--excess));
-  background-color: white;
   padding: calc(var(--excess) / 2);
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   color: blue;
   font-weight: bold;
   text-align: center;
-  /* text-decoration: none; */
+}
+
+button.show-all {
+  color: blue;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 20px 50px;
+  border: none;
+  border-radius: 50px;
 }
 
 .contacts {
-  margin: 100px 0;
-  /* position: relative; */
-  /* top: 0;
-  left: 0; */
-  /* height: 100vh; */
+  padding: 100px 0;
+  -webkit-backdrop-filter: blur(25px);
+  backdrop-filter: blur(25px);
 }
 
 .contacts p:nth-child(1) {
@@ -188,5 +200,4 @@ footer {
 
 footer a {
   color: white;
-  /* text-decoration: none; */
 }
